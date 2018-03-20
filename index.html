@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Language" content="zh-cn">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>群思科技</title>
+    <link type="text/css"  rel="stylesheet" href="css/animate.css">
+	<link type="text/css"  rel="stylesheet" href="css/base.css">
+    <link type="text/css" rel="stylesheet" href="css/css.css">
+	<link type="text/css" rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+<!-- header star -->
+    <div class="header">
+        <div class="logo">
+            <a href="javascript:;"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="nav_pho"><img src="images/nav12.png" alt=""></div>
+        <div class="lang">
+            <div class="lang_tit">简体中文</div>
+            <div class="lang_secl">
+                <p class="act"><a href="javascript:;">简体中文</a></p>
+                <p><a href="javascript:;">繁體中文</a></p>
+                <p><a href="javascript:;">English</a></p>
+            </div>
+        </div>
+        <div class="nav">
+            <p class="act"><a href="javascript:;">首页</a></p>
+            <p><a href="javascript:;">产品与服务</a></p>
+            <p><a href="javascript:;">IT动态</a></p>
+            <p><a href="javascript:;">关于群思</a></p>
+            <p><a href="javascript:;">客户登录</a></p>
+            <p><a href="javascript:;">加入群思</a></p>
+            <p><a href="javascript:;">联系我们</a></p>
+        </div>
+    </div>
+    <div class="nav_pholist">
+        <p class="act"><a href="javascript:;">首页</a></p>
+        <p><a href="javascript:;">产品与服务</a></p>
+        <p><a href="javascript:;">IT动态</a></p>
+        <p><a href="javascript:;">关于群思</a></p>
+        <p><a href="javascript:;">客户登录</a></p>
+        <p><a href="javascript:;">加入群思</a></p>
+        <p><a href="javascript:;">联系我们</a></p>
+    </div>
+    <script type="text/javascript">
+        $(".lang").hover(function(){
+            $(".lang_secl").stop(true,true).slideDown();
+        },function(){
+            $(".lang_secl").slideUp();
+        })
+        $(".lang_secl").on("click","p",function(){
+            $(this).addClass("act").siblings().removeClass("act");
+            $(".lang_tit").text($(this).find("a").text());
+        })
+        $(".nav_pholist").height($(window).height()-50+"px");
+        $(".nav_pho").click(function(){
+            $(".nav_pholist").slideToggle();
+        })
+        $(".header_sec1").click(function(){
+            $(".heg_bt").slideToggle();
+        })
+    </script>
+<!-- header end -->
+<div class="index_banner">
+    <div class="index_banner1" id="index_banner1">
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <a class="prev prev1" href="javascript:void(0)"><</a>
+        <a class="next next1" href="javascript:void(0)">></a>
+    </div>
+    <div class="index_banner2" id="index_banner2">
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/index_banner.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //轮播
+    TouchSlide({
+        slideCell: "#index_banner1",
+        titCell: ".hd ul li",
+        //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell: ".bd ul",
+        //主要部分，让li从左网友排
+        effect: "leftLoop",
+        prevCell:".prev1",
+        nextCell:".next1",
+        interTime:3000,
+        // autoPage: true,
+        //自动分页
+        autoPlay: true //自动播放
+    })
+    TouchSlide({
+        slideCell: "#index_banner2",
+        titCell: ".hd ul li",
+        //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell: ".bd ul",
+        //主要部分，让li从左网友排
+        effect: "leftLoop",
+        interTime:3000,
+        // autoPage: true,
+        //自动分页
+        autoPlay: true //自动播放
+    })
+</script>
+<div class="index_box1 w1200">
+    <div class="index_tit">关于我们</div>
+    <div class="index_box1con">
+        <div class="index_box1rt">
+            <div class="index_box1video">
+                <video id="myVideo" controls="controls" onplay="true" width="100%" height="100%">
+                  <source src="images/video.mp4" type="video/mp4">
+                    您的浏览器暂不支持播放该视频，请升级至最新版浏览器。
+                </video>
+            </div>
+            <p>公司宣传视频</p>
+        </div>
+        <div class="index_box1le">
+            <div class="index_box1inf">
+                群思，成立于2001年，为400多个跨国公司在亚洲的60多个城市提供专业技术工程师、IT基础设施和Helpdesk外包服务。<br><br>
+
+                16年的发展历史，丰富的IT服务经验，300名专业技术服务团队，400余家全球知名合作客户，亚太区60+城市服务网点覆盖，并在美国、欧盟、澳大利亚、马来西亚、新加坡、日本、香港、台湾注册了Fwone国际商标；群思致力于成为一家提供专业、高效计算机外包服务的全球性企业。<br><br>
+
+                致力于成为世界级领先的专业IT服务企业<br>
+                用责任心、技术、流程和规范，使用户任何时间、任何地点都能及时得到群思专业服务<br>
+                向顾客提供富有传奇色彩的顾客服务、永不止境地投入到提升顾客满意的努力中去...             
+            </div>
+            <div class="index_box1mo"><a href="javascript:;">了解更多</a></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".index_box1video").height($(".index_box1video").width()*0.563636+"px");
+    $(window).resize(function(){
+        $(".index_box1video").height($(".index_box1video").width()*0.563636+"px");
+    })
+</script>
+<div class="index_box2">
+    <div class="index_box2con">
+        <div class="index_tit notp">关于我们</div>
+        <div class="index_box2inf">
+            群思呼叫中心的全方位建设，多种语言能力的坐席人员，完善的服务台管理流程与Avaya系统，为客户提供可靠的、高效的服务台配置，帮助客户规避风险，不断提升效率及用户满意度。
+        </div>
+        <div class="index_box2infmo"><a href="javascript:;">更多></a></div>
+    </div>
+</div>
+<div class="index_box3 w1200">
+    <div class="index_box3li">
+        <div class="index_box3litit">
+            <div></div>
+        </div>
+        <div class="index_box3liinf">
+            <p>电脑快修</p>
+            <div>根据用户需求，定期去用户现场，提供操作系统升级病毒定义更新、临时文件清除、系统优化等工作，同时按照IT策略，检查各种设备工作状态，包...</div>
+        </div>
+        <a href="javascript:;" class="pos"></a>
+    </div>
+    <div class="index_box3li">
+        <div class="index_box3litit">
+            <div></div>
+        </div>
+        <div class="index_box3liinf">
+            <p>网络架构与设置</p>
+            <div>根据用户需求，定期去用户现场，提供操作系统升级病毒定义更新、临时文件清除、系统优化等工作，同时按照IT策略，检查各种设备工作状态，包...</div>
+        </div>
+        <a href="javascript:;" class="pos"></a>
+    </div>
+    <div class="index_box3li">
+        <div class="index_box3litit">
+            <div></div>
+        </div>
+        <div class="index_box3liinf">
+            <p>系统部署与安全</p>
+            <div>根据用户需求，定期去用户现场，提供操作系统升级病毒定义更新、临时文件清除、系统优化等工作，同时按照IT策略，检查各种设备工作状态，包...</div>
+        </div>
+        <a href="javascript:;" class="pos"></a>
+    </div>
+    <div class="index_box3li">
+        <div class="index_box3litit">
+            <div></div>
+        </div>
+        <div class="index_box3liinf">
+            <p>机房运维与迁移</p>
+            <div>根据用户需求，定期去用户现场，提供操作系统升级病毒定义更新、临时文件清除、系统优化等工作，同时按照IT策略，检查各种设备工作状态，包...</div>
+        </div>
+        <a href="javascript:;" class="pos"></a>
+    </div>
+    <div class="index_box3li">
+        <div class="index_box3litit">
+            <div></div>
+        </div>
+        <div class="index_box3liinf">
+            <p>代采购</p>
+            <div>根据用户需求，定期去用户现场，提供操作系统升级病毒定义更新、临时文件清除、系统优化等工作，同时按照IT策略，检查各种设备工作状态，包...</div>
+        </div>
+        <a href="javascript:;" class="pos"></a>
+    </div>
+    <div class="index_box3li">
+        <div class="index_box3litit">
+            <div></div>
+        </div>
+        <div class="index_box3liinf">
+            <p>服务台支持</p>
+            <div>根据用户需求，定期去用户现场，提供操作系统升级病毒定义更新、临时文件清除、系统优化等工作，同时按照IT策略，检查各种设备工作状态，包...</div>
+        </div>
+        <a href="javascript:;" class="pos"></a>
+    </div>
+</div>  
+<script type="text/javascript">
+    function box3(){
+        var scrolltops=$("body").scrollTop()||$("html").scrollTop();
+        $(".index_box3li").each(function(i,ele){
+            if($(window).width()>768){
+                var sctops=$(".index_box3").offset().top;
+                if(scrolltops>=sctops-$(window).height()*0.6){
+                    // $(this).animate({"left":"0px","opacity":"1"},600);
+                    setTimeout(function(){
+                        $(ele).animate({"opacity":"1"},300);
+                    },100+300*i)
+                    setTimeout(function(){
+                        $(ele).addClass("lgsm");
+                    },400+400*i)
+                }
+            }
+            if($(window).width()<769){
+                var sctops=$(ele).offset().top;
+                if(scrolltops>=sctops-$(window).height()*0.8){
+                    setTimeout(function(){
+                        $(ele).animate({"opacity":"1"},300);
+                    },100+(i%2)*400)
+                    setTimeout(function(){
+                        $(ele).addClass("lgsm");
+                    },400+(i%2)*400)
+                }
+            }
+        })
+    }
+    box3();
+    $(document).on("scroll",function(){
+        box3();
+    })
+</script>
+<div class="index_box4">
+    <div class="w1200">
+        <div class="index_tit">IT动态</div>
+        <div class="index_box4con">
+            <div class="swiper-container index_box4con1">  
+                <div class="swiper-wrapper">  
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_11.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_12.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_13.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_11.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_12.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_12.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_13.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="index_box4li">
+                            <div class="index_box4liimg"><img src="images/index_11.jpg" alt=""></div>
+                            <div class="index_box4liinf">
+                                <div class="index_box4litit">群思签约某家知名基金管理公司</div>
+                                <div class="index_box4litime">2018-02-08</div>
+                                <div class="index_box4litxt">群思签约某家知名的基金管理公司。成立于2004年，该公司是经中国证监会批准设立的全国性公募基金管理公司之...</div>
+                                <div class="index_box4limo"><span>> </span>了解更多</div>
+                            </div>
+                            <a href="javascript:;" class="pos"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"> 
+    var mySwiper = new Swiper(".index_box4con1",{
+        loop:true,
+        pagination:".swiper-pagination2",
+        paginationClickable: true,
+        slidesPerView:3,
+        slidesPerGroup : 3,
+        autoplayDisableOnInteraction : false, 
+        spaceBetween: 30,
+        autoPlay:3000,
+        breakpoints: {
+            1200: {
+                slidesPerView:2,
+                slidesPerGroup : 2,
+                spaceBetween: 30
+            },
+            769: {
+                slidesPerView:1,
+                slidesPerGroup : 1,
+                spaceBetween: 10
+            },
+        }
+    })
+    $(".index_box4liimg").each(function(){
+        $(this).height($(this).width()*0.563157+"px");
+    })
+</script>
+<div class="index_box5">
+    <div class="index_box5con">
+        <div class="index_tit notp">品牌故事</div>
+        <div class="index_box2inf">
+            F、w分别为中文服务的拼音的第一个字母，同时也是代表Fwone源自中国；<br>Fwone在计算机含义中类似F1，代表提供服务和帮助；<br>Fwone发音为For One，可以解释为为了一个共同的理想和目标，也代表群思
+        </div>
+        <div class="index_box2infmo"><a href="javascript:;">更多></a></div>
+    </div>
+</div>
+<div class="index_box6 w1200">
+    <div class="index_tit">合作伙伴</div>
+    <div class="index_box6con">
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_a.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_b.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_c.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_d.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_e.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_f.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_a.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_b.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_c.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_d.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_e.jpg" alt="">
+        </div>
+        <div class="index_box6li index_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+            <img src="images/hzhb_f.jpg" alt="">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".index_box6li").each(function(){
+        $(this).height($(".index_box6li").eq(0).width()*0.625+"px");
+        $(this).hover(function(){
+            $(this).find("img").animate({"top":"-100%"},400)
+        },function(){
+            $(this).find("img").animate({"top":"0px"},400)
+        })
+    })
+    $(window).resize(function(){
+        $(".index_box6li").each(function(){
+            $(this).height($(".index_box6li").eq(0).width()*0.625+"px");
+        })
+    })
+</script>
+<div class="index_box7">
+    <a href="javascript:;">
+        <div class="index_box7con">
+            <ul>
+                <li class="post1"></li>
+                <li class="post2"></li>
+                <li class="post3"></li>
+                <li class="post4">
+                    <div></div>
+                    <p>群思覆盖</p>
+                </li>
+                <li class="post5"></li>
+                <li class="post6"></li>
+                <li class="post7"></li>
+            </ul>
+        </div>
+    </a>
+</div>
+<script type="text/javascript">
+    function lescr(sec){
+        var scrolltops=$("body").scrollTop()||$("html").scrollTop();
+        $(sec).each(function(){
+            var sctops=$(this).offset().top;
+            if(scrolltops>=sctops-$(window).height()*0.8){
+                $(this).animate({"left":"0px","opacity":"1"},600);
+            }
+        })
+        
+    }
+    function addname(sec1,sec2,name){
+        var scrolltops=$("body").scrollTop()||$("html").scrollTop();
+        $(sec1).each(function(){
+            var sctops=$(sec2).offset().top;
+            if(scrolltops>=sctops-$(window).height()*0.7){
+                $(this).addClass(name);
+            }
+        })
+        
+    }
+    lescr(".index_box1le");
+    lescr(".index_box1rt");
+    lescr(".index_box4con");
+    addname(".index_box2con",".index_box2","updown");
+    addname(".index_box5con",".index_box5","updown");
+    $(document).on("scroll",function(){
+        lescr(".index_box1le");
+        lescr(".index_box1rt");
+        lescr(".index_box4con");
+        addname(".index_box2con",".index_box2","updown");
+        addname(".index_box5con",".index_box5","updown");
+    })
+</script>
+<!--[if IE 8]>
+<script type="text/javascript">
+    $(".index_fade").each(function(i,ele){
+        $(ele).css({"visibility":"visible"});
+    });
+</script>
+<![endif]-->
+<script type="text/javascript">
+    function scr2(){
+        var scrolltop=$("body").scrollTop()||$("html").scrollTop();
+        $(".index_fade").each(function(i,ele){
+            var sctopc=$(ele).offset().top;
+            if(scrolltop>=sctopc-$(window).height()+100){
+                setTimeout(function(){
+                    $(ele).addClass("animated");
+                    $(ele).css({"visibility":"visible"});
+                    $(ele).css({"animation-name":"fadeInDown"});   
+                },100)
+            }
+        });
+    }
+    scr2();
+    $(document).on("scroll",function(){
+        scr2();
+    })
+</script>
+<!-- footer -->
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="footer_tell footer_fade  fadeInDown" style="visibility: hidden; animation-name: none;">咨询热线：+86-400-669-2001</div>
+    <div class="footer_ico footer_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+        <div class="footer_icoli"><a href="javascript:;"><img src="images/footer_ico1.png" alt=""></a></div>
+        <div class="footer_icoli"><a href="javascript:;"><img src="images/footer_ico2.png" alt=""></a></div>
+        <div class="footer_icoli">
+            <a href="javascript:;"><img src="images/footer_ico3.png" alt=""></a>
+            <span><img src="images/ewm.jpg" alt=""></span>
+        </div>
+        <div class="footer_icoli"><a href="javascript:;"><img src="images/footer_ico4.png" alt=""></a></div>
+        <div class="footer_icoli"><a href="Mailto:abc@163.com"><img src="images/footer_ico5.png" alt=""></a></div>
+    </div>
+    <div class="footer_nav footer_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+        <span><a href="javascript:;">首页</a></span>
+        <span><a href="javascript:;">产品与服务</a></span>
+        <span><a href="javascript:;">IT动态</a></span>
+        <span><a href="javascript:;">关于群思</a></span>
+        <span><a href="javascript:;">客户登陆</a></span>
+        <span><a href="javascript:;">加入群思</a></span>
+        <span><a href="javascript:;">联系我们</a></span>
+    </div>
+    <div class="footer_wz footer_fade  fadeInDown" style="visibility: hidden; animation-name: none;">
+        <span><a href="javascript:;">法律声明</a></span>
+        <u>|</u>
+        <span><a href="javascript:;">隐私保护</a></span>
+        <u>|</u>
+        <span><a href="javascript:;">联系我们</a></span>
+        <u>|</u>
+        <span><a href="javascript:;">网站地图</a></span>
+    </div>
+    <div class="footer_bot footer_fade  fadeInDown" style="visibility: hidden; animation-name: none;">copyright©<a href="javascript:;">群思科技(北京)有限公司</a>版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011-2020 京ICP备 11003662号-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公网安备11010502025657号</div>
+</div>
+<script type="text/javascript">
+    $(".footer_icoli").eq(2).hover(function(){
+        $(this).find("span").stop(true,true).fadeIn(800);
+    },function(){
+        $(this).find("span").fadeOut(400);
+    })
+</script>
+<!--[if IE 8]>
+<script type="text/javascript">
+    $(".footer_fade").each(function(i,ele){
+        $(ele).css({"visibility":"visible"});
+    });
+</script>
+<![endif]-->
+<script type="text/javascript">
+    function scrfot(){
+        var scrolltop=$("body").scrollTop()||$("html").scrollTop();
+        $(".footer_fade").each(function(i,ele){
+            var sctopc=$(ele).offset().top;
+            if(scrolltop>=sctopc-$(window).height()+10){
+                setTimeout(function(){
+                    $(ele).addClass("animated");
+                    $(ele).css({"visibility":"visible"});
+                    $(ele).css({"animation-name":"fadeInDown"});   
+                },100)
+            }
+        });
+    }
+    scrfot();
+    $(document).on("scroll",function(){
+        scrfot();
+    })
+</script>
+<!-- footer -->
+</body>
+</html>
